@@ -21,6 +21,10 @@
 // Elements: 5
 
 const listCategories = document.querySelectorAll('.item');
+//const listCategories = document.querySelector('#categories').children;
 console.log('Number of categories:', listCategories.length);
 
-
+for (const category of listCategories) {
+    console.log('Category:', category.querySelector('h2').innerHTML);
+    console.log('Elements:', category.querySelectorAll('li').length);
+};
