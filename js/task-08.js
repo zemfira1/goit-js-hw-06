@@ -29,8 +29,7 @@ function onFormSubmit(event) {
             email,
             password,
         };
+        event.currentTarget.reset();
         return console.log(objectDate);
     }   
-
-    event.currentTarget.reset();
 };
