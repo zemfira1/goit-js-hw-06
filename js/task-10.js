@@ -35,6 +35,7 @@ createBtn.addEventListener('click', createBoxes);
 destroyBtn.addEventListener('click', destroyBoxes);
 
 let amount = 0;
+let divArray = [];
 
 function createBoxes(amount) {
   amount = Number(number.value);
@@ -46,11 +47,13 @@ function createBoxes(amount) {
     div.style.width = sizeCount;
     div.style.height = sizeCount;
 
-    box.insertAdjacentHTML('beforeend', div);
+    divArray.push(div);
     sizeCount += 10;
   }
+  
+  box.append(...divArray);
   console.log(box);
-  return;
+  return box;
 };
  console.log(box);
 
