@@ -43,9 +43,9 @@ function createBoxes(amount) {
    
   for (let i = 1; i <= amount; i += 1){
     let div = document.createElement('div');
-    div.backgroundColor = getRandomHexColor();
-    div.style.width = sizeCount;
-    div.style.height = sizeCount;
+    div.style.backgroundColor = getRandomHexColor();
+    div.style.width = `${sizeCount}px`;
+    div.style.height = `${sizeCount}px`;
 
     divArray.push(div);
     sizeCount += 10;
